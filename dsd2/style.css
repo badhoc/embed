@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+* {        box-sizing: border-box;
+}
+.mainContent {
+            max-width: 600px;
+            height: auto;
+            min-height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: solid;
+            border-color: #6b3374;
+            border-radius: 15px;
+            border-width: 3px;
+            padding-bottom: 1.5em;
+            position: relative;
+            margin-left:auto;
+            margin-right:auto;
+}
+
+@media (min-width:600px){
+  .mainContent {
+    height:100%;
+  }
+}
+
+.header h1 {font-family: corbel, arial, sans-serif;
+            color: #6B3374;
+            font-size: 2em;
+            margin: 0;
+            font-weight: lighter;
+}
+
+#logo{
+  width: 160px;
+  height: 63px;
+  margin-left: 15px;
+}
+
+.header {
+  width:90%;
+  display:flex;
+  justify-content: space-between;
+  margin:4%;
+}
+
+.instruction {  width: 90%;
+                margin: 4%;
+                margin-bottom: 0;
+                margin-top: 0;
+                font-family: arial;
+                font-size: 1.2em;
+                color: #333333;
+}
+
+#q2,
+#q3,
+#q4,
+#q5,
+#restart,
+#storyBCont,
+#results,
+#result0,
+#result1,
+#result2,
+#result3,
+.stories,
+.debtHelpFinalPage{   display:none;
+}
+
+.cloud {    display: none;
+}
+
+#cloud0 {   display: block;
+}
+
+.cloudPic { height:10em;
+}
+
+.debtmeter{ padding: 1.3em;
+}
+
+.quiz, .stories {     width:90%;
+            margin: 4%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: #eee;
+            padding: 2em;
+            padding-bottom: 0;
+            border-radius: 15px;
+            min-height: 170px;
+}
+
+.stories {  margin-top: 4%;
+            margin-bottom: 4%;
+            padding-top: 0;
+            font-family: arial;
+            font-size: .8em;
+}
+
+.storyHeading {
+  font-size: 1.3em;
+  font-family: corbel, arial, sans-serif;
+  color: #6B3374;
+  margin-bottom: -0.7em;
+}
+
+.q {
+  display: flex;
+  flex-direction:column;
+}
+
+.layoutq {
+  display:flex;
+  flex-direction: row;
+}
+
+.qnumber {
+  margin-top: 0px;
+  font-family: arial;
+  color: #6b3374;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+
+.qtext {
+  margin-left: 30px;
+  margin-top: 0px;
+  font-family: arial;
+  color: #6b3374;
+  font-size: 1.2em;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.layoutbutton {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+@media (min-width:600px) {
+  .layoutbutton {
+    margin-bottom: 1em;
+  }
+
+}
+
+.results {      width:90%;
+                background-color: #eee;
+                padding: 1.5em;
+                padding-bottom: 0;
+                border-radius: 15px;
+                margin: 4%;
+                margin-top: 0px;
+}
+
+.result .resulttitle{   font-family: arial;
+                        color: #6b3374;
+                        font-size: 1.5em;
+                        margin-top: 0px;
+}
+
+
+
+.result p{              font-family: arial;
+                        font-size: 0.9em;
+                        color: #333333;
+}
+
+.storyText {
+  quotes:""" """;
+}
+
+.storyText::before {
+  content: open-quote;
+}
+
+.storyText::after {
+  content: close-quote;
+}
+
+.footer {
+  flex-grow: 1;
+  display:flex;
+  flex-flow: row nowrap;
+}
+
+.footer p {
+  text-align: center;
+  font-family: arial;
+  font-size: 0.7em;
+  margin:0;
+  margin-top: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  align-self: flex-end;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .quiz {
+    padding:3%;
+    }
+    .qtext {
+      margin-right: 15px;
+    }
+
+    .cloudpic {
+      display:none;
+    }
+
+    .debtmeter{
+      padding:0.5em;
+    }
+
+    .footer p {
+      font-size: 0.6em;
+    }
+}
+
+
+@media only screen and (max-width: 440px) {
+
+    .result p{
+      font-size: 0.8em;
+    }
+    .header h1 {
+      font-size: 1.5em;
+    }
+    .result .resulttitle{
+      font-size: 1.2em;
+    }
+    .qtext,
+    .instruction {
+      font-size: 1em;
+    }
+
+}
+
+
+@media only screen and (max-width: 355px){
+    .header {
+      flex-direction: column-reverse;
+    }
+}
+
+/* Button Styling */
+
+.btn {
+  cursor: pointer;
+  color: #fff;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  padding:0.5em;
+  border-radius: 6px;
+  border-style: none;
+  margin: 0 1em 1em 1em;
+  font-weight: normal;
+}
+
+.btn-o {
+  background-color:#e4541b;
+}
+
+.btn-o:hover {
+  background: #f1865b;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+
+.btn-g {
+  background-color:#333;
+}
+
+.btn-g:hover {
+  background-color:#474747;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+
+.btn-sm {
+  min-width:4.75em;
+  margin: 0 10px;
+  margin-bottom: .5em;
+}
+
+.btn-lg {
+  display: block;
+  width:100%;
+  max-width: 15em;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+/* btn container sizes */
+
+.storyBCont, .restart, .debtHelpFinalPage {
+  width:75%;
+}
